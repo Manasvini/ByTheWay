@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/control">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:id="@+id/srcData"
+        >
+
+        <TextView
+            android:id="@+id/source_text"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="bottom"
+            android:labelFor="@id/autocomplete_fragment_source"
+            android:text="Source"
+            android:textColor="#71a2b6"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom" >
+            <fragment
+                android:id="@+id/autocomplete_fragment_source"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_bottom"
+                android:layout_marginBottom="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:id="@+id/destData"
+         >
+
+        <TextView
+            android:id="@+id/dest_text"
+            android:layout_width="120dp"
+            android:textColor="#71a2b6"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:labelFor="@id/autocomplete_fragment_source"
+            android:text="Destination"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom">
+
+            <fragment android:id="@+id/autocomplete_fragment_dest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/border_bottom"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+
+            android:id="@+id/getRouteButton"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="Get Route" />
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/uploadButton"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="Share" />
+
+    </LinearLayout>
+</LinearLayout>
